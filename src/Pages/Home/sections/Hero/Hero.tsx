@@ -16,7 +16,7 @@ const Hero = () =>{
       
     }))
     return (
-      <>
+      <>  
         <StyledHero>
           <Container maxWidth="lg">
             <Grid container spacing={2}>
@@ -25,7 +25,7 @@ const Hero = () =>{
               </Grid>
               <Grid item xs={12} md={8} >
                 <Typography color="primary" variant="h1" textAlign={"center"}>Julio Sousa</Typography>
-                <Typography color="primary" variant="h2" textAlign={"center"}>Desenvolvedor BackEnd </Typography>
+                <Typography color="primary" variant="h2" textAlign={"center"}>I'm a Software Enginner </Typography>
                 <Grid container display="flex" justifyContent={"center"}>
                   <Grid item xs={12} md={4} display="flex" justifyContent={"center"}>
                     <Button>
