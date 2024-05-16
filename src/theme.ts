@@ -11,7 +11,7 @@ let theme = createTheme({
     },
     typography: 
     {
-      fontFamily: "fantasy"
+      fontFamily: "Helvetica-Neue"
 
     }
     
