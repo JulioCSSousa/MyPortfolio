@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography} from "@mui/material"
+import { Box, Container, Grid, Typography } from "@mui/material"
 
 export default function Body() {
     return (

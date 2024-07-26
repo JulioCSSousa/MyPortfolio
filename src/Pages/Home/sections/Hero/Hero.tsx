@@ -23,7 +23,7 @@ const Hero = () => {
     window.open(url, "_blank");}
 
   const emailShow = () => {
-    const emailAddress = "seu-email@dominio.com"; // Coloque seu endereço de email aqui
+    const emailAddress = "juliosousa.dev@gmail.com";
     const subject = "Informações sobre serviços";
     const body = "Olá, gostaria de saber mais sobre os seus serviços!";
     const url = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -32,11 +32,11 @@ const Hero = () => {
       <Box
         sx={{
           backgroundColor: theme.palette.primary.main,
-          height: { xs: '100%', sm: "100vh" },
+          height: "100vh",
           display: "flex",
           alignItems: "center"
         }}>
-        <Container maxWidth="lg" sx={{ marginTop: 10 }}>
+        <Container sx={{ marginTop: 10 }}>
           <Grid container spacing={2} mb='2rem'>
             <Grid item xs={12} md={5} display='flex' justifyContent='center'>
               <Box position="relative" >
