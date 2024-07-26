@@ -1,9 +1,9 @@
-import { AppBar, MenuItem, Toolbar, styled, colors, Link } from "@mui/material"
+import { AppBar, MenuItem, Toolbar, styled, Link } from "@mui/material"
 import { Link as RouterLink } from 'react-router-dom';
 
 
 const NavBar = () => {
-    const StyledToolbar = styled(Toolbar)(({ theme }) => ({
+    const StyledToolbar = styled(Toolbar)(() => ({
         display: "flex",
         justifyContent: "space-evenly",
 

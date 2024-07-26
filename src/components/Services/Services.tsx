@@ -1,5 +1,5 @@
 import Slider from 'react-slick';
-import { Container, Typography, Box, Paper, Grid } from '@mui/material';
+import { Container, Typography, Box, Paper} from '@mui/material';
 import { FaDesktop, FaCode, FaWordpress, FaShieldAlt, FaServer } from 'react-icons/fa';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
