@@ -1,34 +1,34 @@
-import styled from "@emotion/styled"
-import theme from "../../theme"
-import { ReactNode } from "react"
+import React, { ReactNode } from 'react';
+import styled from '@emotion/styled';
+import theme from '../../theme';
 
-interface StyledButtonPros{
-    children:ReactNode
+interface StyledButtonProps {
+    children: ReactNode;
+    onClick?: () => void; 
 }
-const StyledButton : React.FC<StyledButtonPros> = ({ children }) =>{
 
-    const StyledButton = styled("button")(() => ({
-        backgroundColor: "transparent",
-        border: `3px solid white ${theme.palette.primary.contrastText}`,
-        borderRadius: "3px",
-        padding: "5px 15px",
-        width: "100%",
-        color: theme.palette.primary.contrastText,
-        alignItems: "center",
-        justifyContent: "center",
-        display: "inline-flex",
-        gap: "10px",
-        '&:hover': {
-            backgroundColor : theme.palette.secondary.main
-        }
+const StyledButtonComponent = styled('button')(() => ({
+    backgroundColor: 'transparent',
+    border: `3px solid white ${theme.palette.primary.contrastText}`,
+    borderRadius: '3px',
+    padding: '5px 15px',
+    width: '100%',
+    color: theme.palette.primary.contrastText,
+    alignItems: 'center',
+    justifyContent: 'center',
+    display: 'inline-flex',
+    gap: '10px',
+    cursor: 'pointer',
+    '&:hover': {
+        backgroundColor: theme.palette.secondary.main,
+    },
+}));
 
-
-    }))
-
+const StyledButton: React.FC<StyledButtonProps> = ({ children, onClick }) => {
     return (
-        <>
-        <StyledButton>{children}</StyledButton>
-        </>
-    )
-}
+        <StyledButtonComponent onClick={onClick}>
+            {children}
+        </StyledButtonComponent>
+    );
+};
 export default StyledButton

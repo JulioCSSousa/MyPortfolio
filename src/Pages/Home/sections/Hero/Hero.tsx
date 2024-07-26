@@ -1,54 +1,74 @@
 
 import { Box, Container, Grid, Typography, styled } from "@mui/material"
 import Avatar from "../../../../assets/img/eu.jpg"
-import DownloadIcon from '@mui/icons-material/Download';
 
 import theme from "../../../../theme";
 import StyledButton from "../../../../components/StyledButton/StyledButton";
+import { AnimatedBackground } from "../../../../components/Animation/Animation";
+import { Email, WhatsApp } from "@mui/icons-material";
+
 
 const Hero = () => {
 
   const StyledImg = styled("img")(({ theme }) => ({
-    width: "80%",
+    width: "75%",
     borderRadius: "50%",
     border: `1px solid ${theme.palette.primary.contrastText}`
 
   }))
-  return (
-    <Box
-      sx={{
-        backgroundColor: theme.palette.primary.main,
-        height: { xs: '100%', sm: "100vh" },
-        display: "flex",
-        alignItems: "center"
-      }}>
-      <Container maxWidth="lg" >
-        <Grid container spacing={2} mb='2rem'>
-          <Grid item xs={12} md={5} display='flex' justifyContent='center'>
-            <StyledImg src={Avatar} />
-          </Grid >
-          <Grid item xs={12} md={7} >
-            <Typography color="primary.contrastText" variant="h1" textAlign={"center"} pb={2}>Julio Sousa</Typography>
-            <Typography color="primary.contrastText" variant="h2" textAlign={"center"}>I'm a Software Enginner </Typography>
-            <Grid container display={"flex"} justifyContent={"center"} spacing={3} pt={3}>
-              <Grid item xs={12} md={4} >
-                <StyledButton>
-                  <DownloadIcon />
-                  <Typography>Download CV </Typography>
-                </StyledButton>
-              </Grid>
-              <Grid item xs={12} md={4} >
-                <StyledButton>
-                  <DownloadIcon />
-                  <Typography>Contact</Typography>
-                </StyledButton>
+  const whatsShow = () => {
+    const phoneNumber = "+5519987102078"; // Coloque seu número de telefone aqui no formato internacional, por exemplo, +5511999999999
+    const message = "Olá, gostaria de saber mais sobre os seus serviços!";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");}
+
+  const emailShow = () => {
+    const emailAddress = "seu-email@dominio.com"; // Coloque seu endereço de email aqui
+    const subject = "Informações sobre serviços";
+    const body = "Olá, gostaria de saber mais sobre os seus serviços!";
+    const url = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(url, "_blank");}
+    return (
+      <Box
+        sx={{
+          backgroundColor: theme.palette.primary.main,
+          height: { xs: '100%', sm: "100vh" },
+          display: "flex",
+          alignItems: "center"
+        }}>
+        <Container maxWidth="lg" sx={{ marginTop: 10 }}>
+          <Grid container spacing={2} mb='2rem'>
+            <Grid item xs={12} md={5} display='flex' justifyContent='center'>
+              <Box position="relative" >
+                <Box position="absolute" width={"100%"} top={-100} right={0}>
+                  <AnimatedBackground />
+                </Box>
+                <Box position="relative" textAlign="center">
+                  <StyledImg src={Avatar} />
+                </Box>
+              </Box>
+            </Grid >
+            <Grid item xs={12} md={7} >
+              <Typography color="primary.contrastText" variant="h1" textAlign={"center"} pb={2}>Julio Sousa</Typography>
+              <Typography color="primary.contrastText" variant="h2" textAlign={"center"}>Desenvolvedor Web </Typography>
+              <Grid container display={"flex"} justifyContent={"center"} spacing={3} pt={3}>
+                <Grid item xs={12} md={4} >
+                  <StyledButton onClick={whatsShow}>
+                    <WhatsApp />
+                    <Typography>whatsapp</Typography>
+                  </StyledButton>
+                </Grid>
+                <Grid item xs={12} md={4} >
+                  <StyledButton onClick={emailShow}>
+                    <Email />
+                    <Typography>Email</Typography>
+                  </StyledButton>
+                </Grid>
               </Grid>
             </Grid>
           </Grid>
-        </Grid>
-      </Container>
-    </Box>
-  )
-}
-
+        </Container>
+      </Box>
+    )
+  }
 export default Hero
