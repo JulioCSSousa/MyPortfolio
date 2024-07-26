@@ -13,12 +13,15 @@ const NavBar = () => {
         <>
             <AppBar position="absolute">
                 <StyledToolbar>
-                    <MenuItem><Link component={RouterLink} to="/" color="inherit" underline="none">
-                        Home</Link></MenuItem>
-                    <MenuItem><Link component={RouterLink} to="/About" color="inherit" underline="none">
-                        About</Link></MenuItem>
-                    <MenuItem><Link component={RouterLink} to="/Projects" color="inherit" underline="none">
-                        Projects</Link></MenuItem>
+                    <Link component={RouterLink} to="/" color="inherit" underline="none">
+                        <MenuItem>
+                            Home</MenuItem></Link>
+                    <Link component={RouterLink} to="/About" color="inherit" underline="none">
+                        <MenuItem>
+                            About</MenuItem></Link>
+                    <Link component={RouterLink} to="/Projects" color="inherit" underline="none">
+                        <MenuItem>
+                            Projects</MenuItem></Link>
                 </StyledToolbar>
             </AppBar>
         </>
