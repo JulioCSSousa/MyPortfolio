@@ -5,9 +5,10 @@ export default function Body() {
         <Box
             sx={{
                 backgroundColor: 'white',
-                height: { xs: '100%', sm: "100vh" },
+                height: '100%',
                 display: "flex",
-                alignItems: "center"
+                alignItems: "center",
+                marginTop: '50px'
             }}>
             <Container maxWidth="lg">
                 <Grid container spacing={1} my='2rem'>

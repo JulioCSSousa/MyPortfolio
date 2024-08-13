@@ -36,7 +36,7 @@ const Hero = () => {
           display: "flex",
           alignItems: "center"
         }}>
-        <Container sx={{ marginTop: 10 }}>
+        <Container >
           <Grid container spacing={2} mb='2rem'>
             <Grid item xs={12} md={5} display='flex' justifyContent='center'>
               <Box position="relative" >
