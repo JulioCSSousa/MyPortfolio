@@ -16,6 +16,7 @@ const App = () => {
         <Route path="https://github.com/JulioCSSousa/front-ecommerce" />
         <Route path="https://back-ecommerce-wl58.onrender.com/" />
         <Route path="https://github.com/JulioCSSousa/back-ecommerce" />
+        <Route path="https://github.com/JulioCSSousa/back-ecommerce" />
       </Routes>
     </Router>
     </>

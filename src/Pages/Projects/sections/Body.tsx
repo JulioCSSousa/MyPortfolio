@@ -2,7 +2,7 @@ import { Box, Button, Container, Grid, Typography, Link } from "@mui/material"
 import './Body.css'
 import Logo from '/assets/logo-no-b.gif';
 import { Link as RouterLink } from 'react-router-dom';
-
+import { AnimatedBackground } from "../../../components/Animation/Animation";
 
 export default function Body() {
     return (
@@ -60,6 +60,23 @@ export default function Body() {
                                 </Box>
                             </Box>
                             <Typography textAlign='center'>Lar Doce Ar Server</Typography>
+                        </Box>
+                        <Box border='1px solid black' borderRadius='10px' height='20rem' bgcolor={'#232323'} marginTop={'10px'}>
+                            <Box className="card-container" m='1rem' height='15rem' display={'flex'} alignContent={'center'} justifyContent={'center'}>
+                                <Box className="card-btn" display={'flex'} alignContent={'center'} justifyContent={'center'}>
+                                    <Link component={RouterLink} to="https://github.com/JulioCSSousa/MyPortfolio" color="inherit" underline="none">
+                                        <Box className="btn-site" position={'relative'} top={'200px'} justifyContent={'center'}>
+                                            <Button > <Typography color={'white'} >Ver Código</Typography></Button>
+                                        </Box>
+                                    </Link>
+                                </Box>
+                                <AnimatedBackground />
+                            </Box>
+                            <Box bottom={'20px'} position={'relative'}>
+                                <Typography textAlign='center' color={'white'}>Julio Sousa</Typography>
+                                <Typography textAlign='center' color={'white'} >Portfolio</Typography>
+                            </Box>
+
                         </Box>
                     </Grid>
                 </Grid>
