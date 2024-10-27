@@ -1,0 +1,24 @@
+.card-container{
+    flex-direction: column;
+    
+}
+
+.img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+img{
+    margin: 10px;
+    width: 200px;
+}
+
+.btn-site{
+    margin: 5px;
+    border: 1px solid;
+    border-radius: 10px;
+
+}

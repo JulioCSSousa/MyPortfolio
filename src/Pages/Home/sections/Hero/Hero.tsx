@@ -1,6 +1,6 @@
 
 import { Box, Container, Grid, Typography, styled } from "@mui/material"
-import Avatar from "../../../../assets/img/eu.jpg"
+import Avatar from "/assets/eu.jpg"
 
 import theme from "../../../../theme";
 import StyledButton from "../../../../components/StyledButton/StyledButton";
@@ -17,7 +17,7 @@ const Hero = () => {
 
   }))
   const whatsShow = () => {
-    const phoneNumber = "+5519987102078"; // Coloque seu número de telefone aqui no formato internacional, por exemplo, +5511999999999
+    const phoneNumber = "+5519987102078";
     const message = "Olá, gostaria de saber mais sobre os seus serviços!";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");}
