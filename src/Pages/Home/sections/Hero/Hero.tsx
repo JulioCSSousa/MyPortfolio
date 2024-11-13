@@ -1,6 +1,6 @@
 
 import { Box, Container, Grid, Typography, styled } from "@mui/material"
-import Avatar from "/assets/eu.jpg"
+import Avatar from "/assets/eu2.jpeg"
 
 import theme from "../../../../theme";
 import StyledButton from "../../../../components/StyledButton/StyledButton";
