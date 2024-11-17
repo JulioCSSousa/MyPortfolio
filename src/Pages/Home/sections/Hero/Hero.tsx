@@ -16,13 +16,13 @@ const Hero = () => {
     border: `1px solid ${theme.palette.primary.contrastText}`
 
   }))
-  const whatsShow = () => {
+  const whatsView = () => {
     const phoneNumber = "+5519987102078";
     const message = "Olá, gostaria de saber mais sobre os seus serviços!";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");}
 
-  const emailShow = () => {
+  const emailView = () => {
     const emailAddress = "juliosousa.dev@gmail.com";
     const subject = "Informações sobre serviços";
     const body = "Olá, gostaria de saber mais sobre os seus serviços!";
@@ -53,13 +53,13 @@ const Hero = () => {
               <Typography color="primary.contrastText" variant="h2" textAlign={"center"}>Desenvolvedor Web </Typography>
               <Grid container display={"flex"} justifyContent={"center"} spacing={3} pt={3}>
                 <Grid item xs={12} md={4} >
-                  <StyledButton onClick={whatsShow}>
+                  <StyledButton onClick={whatsView}>
                     <WhatsApp />
                     <Typography>whatsapp</Typography>
                   </StyledButton>
                 </Grid>
                 <Grid item xs={12} md={4} >
-                  <StyledButton onClick={emailShow}>
+                  <StyledButton onClick={emailView}>
                     <Email />
                     <Typography>Email</Typography>
                   </StyledButton>

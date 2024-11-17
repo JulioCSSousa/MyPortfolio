@@ -1,15 +1,13 @@
 import Slider from 'react-slick';
 import { Container, Typography, Box, Paper} from '@mui/material';
-import { FaDesktop, FaCode, FaWordpress, FaShieldAlt, FaServer } from 'react-icons/fa';
+import { FaDesktop, FaCode, FaServer } from 'react-icons/fa';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const services = [
     { id: 1, title: 'UI e UX', icon: <FaDesktop />, number: '01' },
     { id: 2, title: 'Programação', icon: <FaCode />, number: '02' },
-    { id: 3, title: 'Wordpress', icon: <FaWordpress />, number: '03' },
-    { id: 4, title: 'Cyber Segurança', icon: <FaShieldAlt />, number: '04' },
-    { id: 5, title: 'Infraestrutura', icon: <FaServer />, number: '05' },
+    { id: 5, title: 'Infraestrutura', icon: <FaServer />, number: '03' },
 ];
 
 const Services = () => {
