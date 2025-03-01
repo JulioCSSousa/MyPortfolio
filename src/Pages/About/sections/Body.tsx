@@ -16,21 +16,36 @@ const About: React.FC = () => {
                                 </Grid>
                                 <Grid item xs={12}>
                                     <Typography>
-                                        Olá! Sou desenvolvedor web, tenho 30 anos e estou na faculdade de ADS. Estou à procura de
-                                        projetos que possam me ajudar a fazer uma renda extra. Posso desenvolver uma landing page ou uma API simples para você.
-                                        Tenho sólida experiência em desenvolvimento com python, node-js e react
+                                        Olá! Meu nome é <strong>Julio Cesar da Silva Sousa</strong> e sou um 
+                                        <strong> desenvolvedor web apaixonado por tecnologia e inovação</strong>. 
+                                        Tenho experiência no desenvolvimento de aplicações web, utilizando tecnologias como 
+                                        <strong> C#, ASP.NET MVC, Entity Framework, Node.js, React e MySQL</strong>. 
+                                        Meu foco é criar soluções eficientes, escaláveis e bem estruturadas, aplicando 
+                                        boas práticas de desenvolvimento de software.
+                                        <br /><br />
+                                        Atualmente, estou cursando <strong>Análise e Desenvolvimento de Sistemas</strong> 
+                                        e desenvolvendo projetos próprios para aprimorar minhas habilidades. 
+                                        Um dos meus principais projetos é o <strong>Sistema de Agendamento MVC</strong>, 
+                                        que permite que lojistas gerenciem seus serviços e clientes façam agendamentos online.
+                                        <br /><br />
+                                        Estou sempre aberto a novas oportunidades e desafios na área de tecnologia. 
                                     </Typography>
                                 </Grid>
-                                {['HTML | CSS', 'JavaScript', 'React'].map((skill, index) => (
+                                {[
+                                    { skill: 'C# | ASP.NET MVC', level: '85%' },
+                                    { skill: 'Entity Framework | MySQL', level: '80%' },
+                                    { skill: 'Node.js | TypeScript', level: '75%' },
+                                    { skill: 'React | Frontend', level: '70%' }
+                                ].map((item, index) => (
                                     <Grid item xs={12} key={index}>
                                         <Typography variant="h6" component="h3" gutterBottom>
-                                            {skill}
+                                            {item.skill}
                                         </Typography>
                                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                             <Box sx={{ flexGrow: 1, height: 10, bgcolor: 'grey.300', mr: 1 }}>
-                                                <Box sx={{ width: '80%', height: '100%', bgcolor: 'primary.main' }} />
+                                                <Box sx={{ width: item.level, height: '100%', bgcolor: 'primary.main' }} />
                                             </Box>
-                                            <Typography variant="body2">80%</Typography>
+                                            <Typography variant="body2">{item.level}</Typography>
                                         </Box>
                                     </Grid>
                                 ))}
