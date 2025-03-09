@@ -1,5 +1,5 @@
-import { Box, Button, Container, Grid, Typography, Link } from "@mui/material"
-import './Body.css'
+import { Box, Button, Container, Grid, Typography, Link } from "@mui/material";
+import './Body.css';
 import Logo from '/assets/logo-no-b.gif';
 import { Link as RouterLink } from 'react-router-dom';
 import { AnimatedBackground } from "../../../components/Animation/Animation";
@@ -12,14 +12,14 @@ export default function Body() {
                 height: '100%',
                 display: "flex",
                 alignItems: "center",
-                marginTop: '50px'
+                marginTop: '50px',
             }}>
             <Container maxWidth="lg">
-                <Grid container spacing={1} my='2rem'>
-                    <Grid item xs={12} sm={6} p='1rem' >
-                        <Box border='1px solid black' borderRadius='10px' height='20rem' bgcolor={'beige'} >
+                <Grid container spacing={2} my='2rem'>
+                    {/* Card 1 */}
+                    <Grid item xs={12} sm={6} p='1rem'>
+                        <Box border='1px solid black' borderRadius='10px' height='20rem' bgcolor={'beige'}>
                             <Box className="card-container" m='1rem' height='15rem' display={'flex'} alignContent={'center'} justifyContent={'center'}>
-
                                 <Box className="card-btn" display={'flex'} alignContent={'center'} justifyContent={'center'}>
                                     <Link component={RouterLink} to="https://lar-doce-ar.netlify.app" color="inherit" underline="none">
                                         <Box className="btn-site">
@@ -39,10 +39,11 @@ export default function Body() {
                             <Typography textAlign='center'>Lar Doce Ar Web client</Typography>
                         </Box>
                     </Grid>
-                    <Grid item xs={12} sm={6} p='1rem'>
-                        <Box border='1px solid black' borderRadius='10px' height='20rem' bgcolor={'lightgrey'} >
-                            <Box className="card-container" m='1rem' height='15rem' display={'flex'} alignContent={'center'} justifyContent={'center'}>
 
+                    {/* Card 2 */}
+                    <Grid item xs={12} sm={6} p='1rem'>
+                        <Box border='1px solid black' borderRadius='10px' height='20rem' bgcolor={'lightgrey'}>
+                            <Box className="card-container" m='1rem' height='15rem' display={'flex'} alignContent={'center'} justifyContent={'center'}>
                                 <Box className="card-btn" display={'flex'} alignContent={'center'} justifyContent={'center'}>
                                     <Box className="btn-site">
                                         <Link component={RouterLink} to="https://back-ecommerce-wl58.onrender.com/" color="inherit" underline="none">
@@ -51,7 +52,7 @@ export default function Body() {
                                     </Box>
                                     <Link component={RouterLink} to="https://github.com/JulioCSSousa/back-ecommerce" color="inherit" underline="none">
                                         <Box className="btn-site">
-                                            <Button >Ver Código</Button>
+                                            <Button>Ver Código</Button>
                                         </Box>
                                     </Link>
                                 </Box>
@@ -61,12 +62,16 @@ export default function Body() {
                             </Box>
                             <Typography textAlign='center'>Lar Doce Ar Server</Typography>
                         </Box>
-                        <Box border='1px solid black' borderRadius='10px' height='20rem' bgcolor={'#232323'} marginTop={'10px'}>
+                    </Grid>
+
+                    {/* Card 3 */}
+                    <Grid item xs={12} sm={6} p='1rem'>
+                        <Box border='1px solid black' borderRadius='10px' height='20rem' bgcolor={'#232323'}>
                             <Box className="card-container" m='1rem' height='15rem' display={'flex'} alignContent={'center'} justifyContent={'center'}>
                                 <Box className="card-btn" display={'flex'} alignContent={'center'} justifyContent={'center'}>
                                     <Link component={RouterLink} to="https://github.com/JulioCSSousa/MyPortfolio" color="inherit" underline="none">
                                         <Box className="btn-site" position={'relative'} top={'200px'} justifyContent={'center'}>
-                                            <Button > <Typography color={'white'} >Ver Código</Typography></Button>
+                                            <Button><Typography color={'white'}>Ver Código</Typography></Button>
                                         </Box>
                                     </Link>
                                 </Box>
@@ -74,13 +79,33 @@ export default function Body() {
                             </Box>
                             <Box bottom={'20px'} position={'relative'}>
                                 <Typography textAlign='center' color={'white'}>Julio Sousa</Typography>
-                                <Typography textAlign='center' color={'white'} >Portfolio</Typography>
+                                <Typography textAlign='center' color={'white'}>Portfolio</Typography>
                             </Box>
-
                         </Box>
                     </Grid>
+                    {/* Card 4 */}
+                    <Grid item xs={12} sm={6} p='1rem'>
+                        <Box border='1px solid black' borderRadius='10px' height='20rem' bgcolor={'#4e73df'}>
+                            <Box className="card-container" m='1rem' height='15rem' display={'flex'} alignContent={'center'} justifyContent={'center'}>
+                                <Box className="card-btn" display={'flex'} alignContent={'center'} justifyContent={'center'}>
+                                    <Link component={RouterLink} to="https://appointmentapp-n24v.onrender.com/" color="inherit" underline="none">
+                                        <Box className="btn-site">
+                                            <Button>Ver site</Button>
+                                        </Box>
+                                    </Link>
+                                    <Link component={RouterLink} to="https://github.com/JulioCSSousa/appointmentApp" color="inherit" underline="none">
+                                        <Box className="btn-site">
+                                            <Button>Ver Código</Button>
+                                        </Box>
+                                    </Link>
+                                </Box>
+                            </Box>
+                            <Typography textAlign='center'>AppMVC de Agendamento Salão</Typography>
+                        </Box>
+                    </Grid>
+                    
                 </Grid>
             </Container>
         </Box>
-    )
+    );
 }

@@ -1,28 +1,42 @@
-.card-container{
+.card-container {
     flex-direction: column;
-    
+    display: flex;
+    justify-content: center;
+    height: 100%;  /* Use 100% da altura disponível */
 }
 
-.img-container{
+.card-btn {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-
 }
 
-img{
+img {
     margin: 10px;
-    width: 200px;
+    max-width: 100%;  /* Faz a imagem ser responsiva */
+    height: auto;     /* Mantém a proporção da imagem */
 }
 
-.btn-site{
+.btn-site {
     margin: 5px;
     border: 1px solid;
     border-radius: 10px;
-
+    background-color: #007bff;  /* Cor de fundo */
+    transition: background-color 0.3s ease;  /* Transição suave no hover */
 }
 
-.btn{
-    color: aliceblue;
+.btn-site:hover {
+    background-color: #0056b3;  /* Cor ao passar o mouse */
+}
+
+.btn {
+    color: aliceblue;  /* Cor do texto no botão */
 }

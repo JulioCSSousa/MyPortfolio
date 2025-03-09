@@ -42,7 +42,7 @@ const About: React.FC = () => {
                                             {item.skill}
                                         </Typography>
                                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                                            <Box sx={{ flexGrow: 1, height: 10, bgcolor: 'grey.300', mr: 1 }}>
+                                            <Box sx={{ flexGrow: 1, heightgit: 10, bgcolor: 'grey.300', mr: 1 }}>
                                                 <Box sx={{ width: item.level, height: '100%', bgcolor: 'primary.main' }} />
                                             </Box>
                                             <Typography variant="body2">{item.level}</Typography>
